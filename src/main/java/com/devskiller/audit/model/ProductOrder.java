@@ -1,9 +1,14 @@
 package com.devskiller.audit.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 
+@Entity
 public class ProductOrder {
 
+    @Id
     private Long id;
 
     private String userLogin;
@@ -11,6 +16,9 @@ public class ProductOrder {
     private String productId;
 
     private LocalDateTime creationTime;
+
+    public ProductOrder(Long id , String userLogin, String productId, LocalDateTime creationTime) {
+    }
 
     public Long getId() {
         return id;
